@@ -2,7 +2,7 @@
 
 Setup and first Python program for the Super30 course. It sets up Python 3.12 with `uv` and VS Code, then verifies the setup by running `hello.py`.
 
-> **Note on evidence:** The environment details in this README (Python 3.12.13, VS Code 1.141.0, installed extensions, terminal) were captured on my own machine and cannot be confirmed from the source files alone. The screenshots in [`docs/`](docs/) are the evidence for them. The [Verification summary](#verification-summary) maps each claim to the file or screenshot that backs it, and [Reproduce the check](#reproduce-the-check) shows how to re-run it on any machine.
+> **Note on evidence:** The environment details in this README (Python 3.12.13, VS Code 1.141.0, installed extensions, terminal) were captured on my own machine and cannot be confirmed from the source files alone. The screenshots in [`docs/`](docs/) are the evidence for them. The [Verification summary](#verification-summary) maps each claim to the file or screenshot that backs it.
 
 ## Contents
 
@@ -11,7 +11,6 @@ Setup and first Python program for the Super30 course. It sets up Python 3.12 wi
 - [Setup steps](#setup-steps)
 - [Project structure](#project-structure)
 - [Running the program](#running-the-program)
-- [Reproduce the check](#reproduce-the-check)
 - [Screenshots](#screenshots)
   - [Python version](#python-version)
   - [Program execution](#program-execution)
@@ -79,26 +78,13 @@ source .venv/bin/activate
 python super30-python/hello.py
 ```
 
-Expected output (the version and system lines depend on the machine; these are from mine):
+Output on my machine (the version and system lines depend on the machine):
 
 ```
 Hello Super30
 My Python environment is ready
 Python version: 3.12.13 (main, May 10 2026, 19:20:41) [Clang 22.1.3 ]
 System: Darwin 27.0.0 (arm64)
-```
-
-## Reproduce the check
-
-On any machine with `uv` installed, these commands confirm the setup without relying on my screenshots:
-
-```bash
-uv python install 3.12
-uv venv
-source .venv/bin/activate
-python --version                  # expect Python 3.12.x
-python super30-python/hello.py    # expect the four lines above, with your own version and system
-code --list-extensions --show-versions   # optional, lists installed VS Code extensions
 ```
 
 ## Screenshots
