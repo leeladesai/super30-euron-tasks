@@ -9,6 +9,9 @@ Setup and first Python program for the Super30 course.
 - [Project structure](#project-structure)
 - [Running the program](#running-the-program)
 - [Verification](#verification)
+  - [Python version](#python-version)
+  - [Program execution](#program-execution)
+  - [VS Code extensions](#vs-code-extensions)
 
 ## Environment setup
 
@@ -36,8 +39,13 @@ Setup and first Python program for the Super30 course.
 ├── README.md
 ├── pyproject.toml      # project metadata, requires Python >= 3.12
 ├── .python-version     # pins Python 3.12
-├── requirements.txt
+├── requirements.txt    # empty, no third-party dependencies
+├── .vscode/
+│   ├── extensions.json # recommended extensions (Python, Pylance)
+│   └── settings.json   # interpreter set to .venv
 ├── docs/
+│   ├── python-version.png      # screenshot of python --version in the venv
+│   ├── hello-execution.png     # screenshot of hello.py running in the VS Code terminal
 │   └── vscode-extensions.png   # screenshot of the extension list
 └── super30-python/
     └── hello.py        # first program
@@ -61,7 +69,21 @@ System: Darwin 27.0.0 (arm64)
 
 ## Verification
 
-The `code` command is on the PATH (symlinked to `~/.local/bin/code`), so the installed VS Code extensions can be listed from the terminal:
+### Python version
+
+`.python-version` pins Python 3.12. With the virtual environment activated, `python --version` reports the matching interpreter:
+
+![Terminal in the activated super30-euron-tasks venv, where python --version prints Python 3.12.13](docs/python-version.png)
+
+### Program execution
+
+Running `hello.py` from the VS Code integrated terminal (the Terminal tab of the bottom panel), with the venv active, gives the output shown under [Running the program](#running-the-program):
+
+![VS Code Terminal panel showing python --version printing Python 3.12.13, then python super30-python/hello.py printing its four output lines](docs/hello-execution.png)
+
+### VS Code extensions
+
+The `code` command is on the PATH (symlinked to `~/.local/bin/code`), so the installed extensions can be listed from the terminal:
 
 ```bash
 code --list-extensions --show-versions
