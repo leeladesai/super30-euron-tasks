@@ -3,15 +3,17 @@
 # Using loops, calculate highest marks, lowest marks, average marks, number of students who passed, and number who failed. 
 # Consider 40 as the passing mark.
 
-# Dictionary of students with their marks in list along with subjects. For example:
-students = {
-     "Alice": {"English": 85, "Math": 92, "Science": 78, "History": 88, "Geography": 95},
-     "Bob": {"English": 45, "Math": 50, "Science": 42, "History": 38, "Geography": 55},
-     "Charlie": {"English": 90, "Math": 88, "Science": 95, "History": 82, "Geography": 78},
-     "David": {"English": 30, "Math": 25, "Science": 28, "History": 35, "Geography": 40},
-     "Eve": {"English": 70, "Math": 75, "Science": 80, "History": 65, "Geography": 72},
-     "Frank": {"English": 55, "Math": 60, "Science": 58, "History": 52, "Geography": 48}
-}
+SUBJECTS = ["English", "Math", "Science", "History", "Geography"]
+
+# List of students; each student's marks are a list in the same order as SUBJECTS.
+students = [
+    {"name": "Alice", "marks": [85, 92, 78, 88, 95]},
+    {"name": "Bob", "marks": [45, 50, 42, 38, 55]},
+    {"name": "Charlie", "marks": [90, 88, 95, 82, 78]},
+    {"name": "David", "marks": [30, 25, 28, 35, 40]},
+    {"name": "Eve", "marks": [70, 75, 80, 65, 72]},
+    {"name": "Frank", "marks": [55, 60, 58, 52, 48]},
+]
 
 PASS_MARK = 40
 
@@ -22,15 +24,17 @@ def student_mark_analyser(students):
     passed = 0
     failed = 0
 
-    for name, subjects in students.items():
+    for student in students:
+        name = student["name"]
+        marks = student["marks"]
         total = 0
         all_subjects_ok = True
-        for subject, mark in subjects.items():
+        for mark in marks:
             total += mark
             if mark < PASS_MARK:
                 all_subjects_ok = False
 
-        average = total / len(subjects)
+        average = total / len(marks)
         class_total += average
         print(name, "total:", total, "average:", round(average, 2))
 

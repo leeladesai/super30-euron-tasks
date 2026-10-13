@@ -17,7 +17,7 @@ Each question is a separate file. The first lines of each file describe the task
 
 ## Setup / Run Instructions
 
-1. Install Python 3.12 or newer (the repository pins `3.12` in `.python-version`). No third-party packages are needed.
+1. Install Python 3.12 or newer (the repository pins `3.12` in `.python-version`). Only Q11 needs a third-party package, `pwinput` (masks the password with `*`); it is declared in `pyproject.toml`, so run `uv sync` (or `pip install pwinput`) first.
 2. Open a terminal in this folder:
    ```
    cd super30-python/python-loops-functions-assignment
@@ -37,14 +37,14 @@ Each question is a separate file. The first lines of each file describe the task
 | # | File | What it does |
 |---|---|---|
 | Q1 | `01_number_analyzer.py` | Prints 1 to N, labels each even/odd, counts both |
-| Q2 | `02_multiplication_table.py` | Multiplication table with a user-supplied range |
+| Q2 | `02_multiplication_table.py` | Multiplication table for any number, with a user-supplied ending range (1 to 100) |
 | Q3 | `03_sum_average.py` | Total and average with a loop (no `sum()`) |
 | Q4 | `04_max_min.py` | Largest and smallest value with loops (no `max()`/`min()`) |
 | Q5 | `05_character_frequency.py` | How many times each character occurs in a string |
 | Q6 | `06_character_type_counter.py` | Counts vowels, consonants, digits, spaces and special characters |
 | Q7 | `07_prime_finder.py` | Primes in a user-supplied range using nested loops |
 | Q8 | `08_pattern_generator.py` | Number triangle pattern with nested `for` loops |
-| Q9 | `09_student_marks_analyzer.py` | Highest, lowest, average, pass and fail counts (pass mark 40) |
+| Q9 | `09_student_marks_analyzer.py` | Marks stored in a list; highest, lowest, average, pass and fail counts (pass mark 40) |
 | Q10 | `10_atm_simulator.py` | ATM menu with balance, deposit, withdraw and exit (starts at Rs. 10,000) |
 | Q11 | `11_password_retry.py` | Three password attempts, then "Account Locked" |
 | Q12 | `12_number_guessing_game.py` | Guess a number from 1 to 100 with "Too High"/"Too Low" hints |
