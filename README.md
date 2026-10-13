@@ -1,6 +1,6 @@
 # Super30 Euron Tasks
 
-Setup and first Python program for the Super30 course.
+Setup and first Python program for the Super30 course. It sets up Python 3.12 with `uv` and VS Code, then verifies the setup by running `hello.py`.
 
 ## Contents
 
@@ -12,6 +12,7 @@ Setup and first Python program for the Super30 course.
   - [Python version](#python-version)
   - [Program execution](#program-execution)
   - [VS Code extensions](#vs-code-extensions)
+  - [VS Code workspace](#vs-code-workspace)
 
 ## Environment setup
 
@@ -21,7 +22,7 @@ Setup and first Python program for the Super30 course.
 | Python version | 3.12.13 (output of `python --version`) |
 | Environment manager | `uv`, with a virtual environment in `.venv` |
 | Editor | Visual Studio Code 1.141.0 |
-| VS Code extensions | Python (ms-python.python), Pylance (ms-python.vscode-pylance), Python Debugger (ms-python.debugpy), Jupyter (ms-toolsai.jupyter) |
+| VS Code extensions | Python (ms-python.python), Pylance (ms-python.vscode-pylance), Python Debugger (ms-python.debugpy), Python Environments (ms-python.vscode-python-envs), Jupyter (ms-toolsai.jupyter) |
 | Terminal | VS Code integrated terminal, zsh |
 
 ## Setup steps
@@ -39,6 +40,8 @@ Setup and first Python program for the Super30 course.
 ├── README.md
 ├── pyproject.toml      # project metadata, requires Python >= 3.12
 ├── .python-version     # pins Python 3.12
+├── uv.lock             # uv lockfile
+├── .gitignore
 ├── requirements.txt    # empty, no third-party dependencies
 ├── .vscode/
 │   ├── extensions.json # recommended extensions (Python, Pylance)
@@ -46,7 +49,8 @@ Setup and first Python program for the Super30 course.
 ├── docs/
 │   ├── python-version.png      # screenshot of python --version in the venv
 │   ├── hello-execution.png     # screenshot of hello.py running in the VS Code terminal
-│   └── vscode-extensions.png   # screenshot of the extension list
+│   ├── vscode-extensions.png   # screenshot of the extension list
+│   └── vscode-workspace.png    # screenshot of the full VS Code window
 └── super30-python/
     └── hello.py        # first program
 ```
@@ -90,3 +94,9 @@ code --list-extensions --show-versions
 ```
 
 ![Terminal output of code --list-extensions --show-versions, with the Python, Pylance and Python Environments extensions highlighted](docs/vscode-extensions.png)
+
+### VS Code workspace
+
+The full VS Code window with the project open: the Explorer shows the project files, `hello.py` is open in the editor, and the integrated terminal below shows the venv active, `python --version` reporting 3.12.13, and `hello.py` printing its output.
+
+![VS Code window with the super30-euron-tasks project open, hello.py in the editor and its output in the terminal](docs/vscode-workspace.png)
