@@ -2,6 +2,14 @@
 
 Setup and first Python program for the Super30 course.
 
+## Contents
+
+- [Environment setup](#environment-setup)
+- [Setup steps](#setup-steps)
+- [Project structure](#project-structure)
+- [Running the program](#running-the-program)
+- [Verification](#verification)
+
 ## Environment setup
 
 | Item | Details |
@@ -29,6 +37,8 @@ Setup and first Python program for the Super30 course.
 ├── pyproject.toml      # project metadata, requires Python >= 3.12
 ├── .python-version     # pins Python 3.12
 ├── requirements.txt
+├── docs/
+│   └── vscode-extensions.png   # screenshot of the extension list
 └── super30-python/
     └── hello.py        # first program
 ```
@@ -48,3 +58,13 @@ My Python environment is ready
 Python version: 3.12.13 (main, May 10 2026, 19:20:41) [Clang 22.1.3 ]
 System: Darwin 27.0.0 (arm64)
 ```
+
+## Verification
+
+The `code` command is on the PATH (symlinked to `~/.local/bin/code`), so the installed VS Code extensions can be listed from the terminal:
+
+```bash
+code --list-extensions --show-versions
+```
+
+![Terminal output of code --list-extensions --show-versions, with the Python, Pylance and Python Environments extensions highlighted](docs/vscode-extensions.png)
